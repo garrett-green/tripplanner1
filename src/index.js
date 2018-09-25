@@ -19,4 +19,6 @@ buildMarker('hotels', [-87.641, 41.895]).addTo(map);
 
 buildMarker('activities', [-87.6359, 41.8789]).addTo(map)
 
+buildMarker('restaurants', [-87.6226, 41.8826]).addTo(map)
+
 module.exports = map

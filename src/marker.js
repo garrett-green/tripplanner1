@@ -12,7 +12,14 @@ const buildMarker = (type, coords) => {
   const markerDomEl = document.createElement('div');
   markerDomEl.style.width = "32px";
   markerDomEl.style.height = "39px";
-  markerDomEl.style.backgroundImage = "url(http://i.imgur.com/D9574Cu.png)";
+  if (type === 'hotels') {
+    markerDomEl.style.backgroundImage = "url(http://i.imgur.com/D9574Cu.png)";
+  } else if (type === 'restaurants')  {
+    markerDomEl.style.backgroundImage = "url(http://i.imgur.com/cqR6pUI.png)";
+  } else  {
+    markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+  }
+
   return new mapbox.Marker(markerDomEl).setLngLat(coords)
 };
 
