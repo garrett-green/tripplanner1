@@ -1,5 +1,3 @@
-console.log('a package of the web')
-
 const mapboxgl = require("mapbox-gl");
 
 mapboxgl.accessToken = "pk.eyJ1IjoiYmFzc21hcmtpZSIsImEiOiJjam1pNThiYTAwMGMwM3FsZmo2endmcjRiIn0.pglqo6fXBC0jES7xWOXWjA";
@@ -10,3 +8,10 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
+
+const markerDomEl = document.createElement('div');
+markerDomEl.style.width = "32px";
+markerDomEl.style.height = "39px";
+markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+
+new mapboxgl.Marker(markerDomEl).setLngLat([-87.641, 41.895]).addTo(map);
