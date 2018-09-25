@@ -12,3 +12,37 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+header  {
+  display: flex;
+  background-color: palevioletred;
+  padding-left: 10px;
+}
+
+#type {
+  background-color: rgb(238, 69, 238);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 50%;
+  height: 25%;
+}
+
+#type select {
+  width: 80%;
+}
+
+#plans  {
+  background-color: lawngreen;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  height: 25%;
+}
+
+#type, #plans > h4 {
+  font-size: 25px;
+  text-align: center;
+}
+
